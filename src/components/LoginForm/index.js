@@ -54,7 +54,7 @@ class LoginForm extends Component {
     window.addEventListener(
       "message",
       (event) => {
-        const hash = JSON.parse(event.data);
+        const hash = event.data;
         if (hash.type === "access_token") {
           localStorage.setItem("pa_token", hash.access_token);
           localStorage.setItem(
@@ -81,7 +81,7 @@ class LoginForm extends Component {
   getRedirectURL = () => {
     if (this.isDevelopmentEnvironment()) {
       /* ADD THIS URL to your Application Redirect URIs to redirect after authentication success OR failure */
-      return "http://localhost:3000/login";
+      return "http://localhost:3000";
     }
     /* Change this redirectURL accordingly before publishing your project and ADD THIS URL to your Application Redirect URIs to redirect after authentication success OR failure */
     return "https://krcportfolio.ccbp.tech";
@@ -114,14 +114,15 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <form className="form-container" onSubmit={this.submitForm}>
+      <div className="login-container">
+        <form className="login-logo-container" onSubmit={this.submitForm}>
           <img
             src="https://res.cloudinary.com/do4qwwms8/image/upload/v1625029477/Spotify%20Clone/music_sjt9vm.png"
-            className="login-website-logo-desktop-image"
+            className="login-logo"
             alt="website logo"
           />
-          <button type="submit" className="login-button">
+          <h1 className="logo-title">Spotify Remix</h1>
+          <button type="submit" className="login-btn">
             LOG IN SPOTIFY REMIX
           </button>
         </form>

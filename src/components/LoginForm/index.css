@@ -1,4 +1,4 @@
-/* /* .login-container {
+.login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +14,7 @@
   align-items: center;
   background-color: #181818;
   width: 300px;
-  height: 320px;
+  height: 350px;
   border: 3px solid #ff4500;
   border-radius: 5px;
 }
@@ -41,7 +41,7 @@
   border: 1px solid white;
   border-radius: 5px;
   height: 40px;
-  width: 100px;
+  /* width: 100px; */
   margin-top: 15px;
   cursor: pointer;
 }
@@ -49,9 +49,9 @@
   border: 1px solid #ff4500;
   background-color: white;
   color: #ff4500;
-} */
+}
 
-.login-form-container {
+/* .login-form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,4 +108,4 @@
   border: none;
   outline: none;
   cursor: pointer;
-}
+} */
